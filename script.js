@@ -8,19 +8,17 @@ document.getElementById('Form').addEventListener('submit', (e) => {
 
 
 
-    var user = new User(
-        document.getElementById('FirstName'),
-        document.getElementById('LirstName'),
-        document.getElementById('EmailAddress'),
-        document.getElementById('PhoneNumber'),
-        document.getElementById('PostalAddress'),
-        document.getElementById('ZipCode'),
-        document.getElementById('PostalOffice'),
+    const user = new User(
+        document.getElementById('FirstName').value,
+        document.getElementById('LastName').value,
+        document.getElementById('EmailAddress').value,
+        document.getElementById('PhoneNumber').value,
+        document.getElementById('PostalAddress').value,
+        document.getElementById('ZipCode').value,
+        document.getElementById('PostOffice').value,
         )
 
-console.log(user.FirstName)
-    
-console.log(user.LastName)
+console.log(user.FirstName),console.log(user.LastName)
     
 console.log(user.DisplayName)
     
@@ -52,10 +50,3 @@ $(document).ready(function() {
 
 
 
-$(document).ready(function() {
-
-    $("#flip").click(function(){
-        $("#panel").slideToggle("slow");
-    }); 
-
-})
