@@ -1,21 +1,12 @@
-// export const validate = (value, min = 4, callback) => {
-//     if(value.length < min){
-//         callback({statusCode: 4001, message: `uppfyller inte kravet på ${min} tecken.`})
-//     }
-       
-//     else{
-//         callback({statusCode: 2001, message: `uppfyller kravet på ${min} tecken.`})
-//     }
-        
-// }
+
 
 // export const containNumbers = value => {
 //     return /\d/.test(value)
 // }
 
-// export function validateEmail(email) {
+// export function ValidateEmail(EmailAddress) {
 //     const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-//     return re.test(email);
+//     return re.test(EmailAddress);
 // }
 
 // export function Validate (input) {
@@ -25,12 +16,18 @@
 //         input.addEventListener('keyup', (e) => {
 //             if(e.target.value.length < 4) {
 //                 document.getElementById(`${e.target.id}-error`).innerText = 'För få tecken i ' + e.target.id
-//                 document.getElementById('add_btn').disabled = true
+//                 document.getElementById('Save_Btn').disabled = true
 //             }
 //             else {
 //                 document.getElementById(`${e.target.id}-error`).innerText = ''
-//                 document.getElementById('add_btn').disabled = false
+//                 document.getElementById('Save_Btn').disabled = false
 //             }
 //         })
 //     } 
 // }
+
+
+
+export function EmailIsValid (Email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(Email)
+  }

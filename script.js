@@ -1,5 +1,22 @@
 import User from './Models/User.js'
-// import {validate, validateEmail, Validate} from './Functions'
+import {EmailIsValid} from './Functions.js'
+
+
+
+let Email = document.getElementById('EmailAddress')
+
+Email.addEventListener("keyup", Event => {
+    if (EmailIsValid(Event.target.value) == true) {
+        document.getElementById('Save_Btn').disabled = false
+        $('.EmailAddress-Invalid').html(`<p> </p>`)
+        return;
+    }
+    else{
+        $('.EmailAddress-Invalid').html(`<p> Invalid Email Address Input </p>`)
+        document.getElementById('Save_Btn').disabled = true
+        return;
+    }
+})
 
 
 

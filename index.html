@@ -26,9 +26,10 @@
       </div>
 
       <div class="form-floating mb-3">
-        <input type="email" class="form-control" id="EmailAddress" placeholder="name@example.com" autocomplete="chrome-off,off"  required>
+        <input keyup type="email" class="form-control" id="EmailAddress" placeholder="name@example.com" autocomplete="chrome-off,off"  required>
         <label for="EmailAddress">Email Address</label>
       </div>
+      <div class="EmailAddress-Invalid"></div>
 
       <hr class="line1">
 
@@ -54,7 +55,7 @@
         <label for="PostOffice">Post Office</label>
       </div>
 
-      <button class="btn btn-primary" type="submit">Register User</button>
+      <button disabled class="btn btn-primary" id="Save_Btn" type="submit">Register User</button>
 
     </form>
       
